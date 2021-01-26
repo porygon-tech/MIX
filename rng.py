@@ -1,7 +1,7 @@
 from datetime import datetime
 import math
 
-#from uniform(0,1) to gaussian-like distribution 
+#from uniform(0,1) to bell-shaped distribution (derived from hyperbolic tangent)
 def expansor(x,D=0.5):
 	return(D * 0.5 * math.log(x / (1 - x)))
 
