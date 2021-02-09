@@ -12,3 +12,12 @@ function md(){
 function catg(){
     cat $1 | grep $2
 }
+
+: '
+cool and good bash aliases and functions. Place it at ~/ and just make sure that ~/.bashrc has the lines:
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+'
