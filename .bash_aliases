@@ -13,6 +13,13 @@ function catg(){
     cat $1 | grep $2
 }
 
+function up(){
+	for (( i = 0; i < $1; i++ )); do
+		cd ..
+	done
+}
+
+
 : '
 cool and good bash aliases and functions. Place it at ~/ and just make sure that ~/.bashrc has the lines:
 
