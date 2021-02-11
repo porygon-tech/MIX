@@ -4,19 +4,21 @@ alias lc='cat $1 | wc -l'
 alias histg='history | grep'
 alias home='cd ~/'
 
-function md(){
-        mv $1 $2
-        cd $2
-}
+
+function md() { mv "${@:1:$#-1}" "${@: -1}" && cd "${@: -1}"; }
 
 function catg(){
     cat $1 | grep $2
 }
 
 function up(){
-	for (( i = 0; i < $1; i++ )); do
+	if [ $# -eq 0 ]; then
 		cd ..
-	done
+	else
+		for (( i = 0; i < $1; i++ )); do
+			cd ..
+		done
+	fi
 }
 
 
