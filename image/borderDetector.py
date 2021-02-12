@@ -38,6 +38,8 @@ L_dist = np.sqrt(np.sum(((pic - L)**2), axis=2))
 def augment(x, slope):
 	return((-1 / slope**x + 1)*255)
 
+# x is the average of squared distances to the four adjacent pixels
+# slope is a parameter of sensitivity. The higher, the more edges will be detected
 cmx = augment(x=((U_dist**2 + D_dist**2 + L_dist**2 + R_dist**2)/4)/255, slope = sensitivity)
 
 print('done')
