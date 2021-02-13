@@ -6,10 +6,10 @@ alias home='cd ~/'
 
 
 function md() { mv "${@:1:$#-1}" "${@: -1}" && cd "${@: -1}"; }
+#move files and follow them to path destination folder.
 
-function catg(){
-    cat $1 | grep $2
-}
+function catg(){ cat $1 | grep $2; }
+#shows lines containing string
 
 function up(){
 	if [ $# -eq 0 ]; then
