@@ -1,9 +1,11 @@
-alias ll='ls -lhA'
+alias ll='ls -lhAS'
 alias aliaseditor='nano ~/.bash_aliases && source ~/.bash_aliases'
 alias lc='cat $1 | wc -l'
 alias histg='history | grep'
 alias home='cd ~/'
 
+function clearempty() { ls -l | grep -P "^\S+\s+\S+\s+\S+\s+\S+\s+0" | awk '{print $9}' | xargs rm; }
+#removes all 0-bytes files in current directory
 
 function md() { mv "${@:1:$#-1}" "${@: -1}" && cd "${@: -1}"; }
 #move files and follow them to path destination folder.
