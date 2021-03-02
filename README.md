@@ -1,4 +1,2 @@
 # AESTHETICS
-Developer's Floral Shoppe
-
-A silly mix of goodies and cool stuff
+A mix of miscellaneous tiny scripts.
