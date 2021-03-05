@@ -9,7 +9,7 @@ function clearempty() { ls -l | grep -P "^\S+\s+\S+\s+\S+\s+\S+\s+0" | awk '{pri
 function md() { mv "${@:1:$#-1}" "${@: -1}" && cd "${@: -1}"; }
 #moves files and takes you too to the destination path.
 
-function catg(){ cat $1 | grep $2; }
+function catg(){ cat $1 | grep -Pn $2; }
 #shows lines containing string
 
 function sec() { head $1 $3 | tail $2; }
@@ -18,6 +18,26 @@ function sec() { head $1 $3 | tail $2; }
 function lc() { cat $1 | wc -l; }
 #counts lines of a file
 
+function up(){
+        if [ $# -eq 0 ]; then
+                cd ..
+        else
+                for (( i = 0; i < $1; i++ )); do
+                        cd ..
+                done
+        fi
+}
+
+
+alias gotoscratch='cd /scratch'
+alias gotomiRNetworks='cd ~/miRNetworks/mroman'
+function mmiRNet() { mv $1 ~/miRNetworks/mroman && cd ~/miRNetworks/mroman; }
+
+function gupload() {
+        git add .
+        git commit -m "AUTO $(date)"
+        git push
+}
 
 
 
