@@ -38,6 +38,7 @@ function gupload() {
         git commit -m "AUTO $(date)"
         git push
 }
+#semi-automatic github upload. Commit name is generated from system time
 
 
 
