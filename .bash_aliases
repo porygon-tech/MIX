@@ -2,6 +2,8 @@ alias ll='ls -lhAS'
 alias aliaseditor='nano ~/.bash_aliases && source ~/.bash_aliases'
 alias histg='history | grep'
 alias home='cd ~/'
+alias seekbig="find ./* -size +100M -printf '%f\n'"
+
 
 function clearempty() { ls -l | grep -P "^\S+\s+\S+\s+\S+\s+\S+\s+0" | awk '{print $9}' | xargs rm; }
 #removes all 0-bytes files in current directory
