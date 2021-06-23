@@ -9,9 +9,10 @@ They can be easily installed as described [here](https://colorsublime.github.io/
 There is also a very user-friendly [theme editor](https://tmtheme-editor.herokuapp.com "theme editor")
 
 example:
+```
 cd ~/.config/sublime-text-3/Packages
 wget https://github.com/porygon-tech/MIX/blob/master/sublimeThemes/nether.tmTheme
-
+```
 ------------
 
 
