@@ -11,7 +11,7 @@ There is also a very user-friendly [theme editor](https://tmtheme-editor.herokua
 example:
 ```
 cd ~/.config/sublime-text-3/Packages
-wget https://github.com/porygon-tech/MIX/blob/master/sublimeThemes/nether.tmTheme
+wget https://github.com/porygon-tech/MIX/blob/master/sublimeThemes/nether2.tmTheme
 ```
 ------------
 
