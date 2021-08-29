@@ -16,8 +16,14 @@ wget https://github.com/porygon-tech/MIX/blob/master/sublimeThemes/nether2.tmThe
 ------------
 
 
-### image/watchdog
+### gadgets/watchdog
 Watchdog is a scrappy surveillance webcam software created using python and OpenCV. Simply put, you set the webcam in the surveillance zone, open a terminal and run `python3 watchdog.py 15 2`, where 15 is the threshold and 2 the time delay (in seconds) (params should be tested and modified depending on the hardware). Watchdog computes the dense optical flow (DOF) from stream, taking pictures when the DOF reaches the threshold value. The delay is the number of seconds between the detection and the shot.
+
+------------
+
+
+### gadgets/keyLgLite
+keyLgLite is a super lightweight keylogger made using pynput.
 
 ------------
 
