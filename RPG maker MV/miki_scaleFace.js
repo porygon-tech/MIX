@@ -45,8 +45,8 @@ Imported.miki_scaleFace = '1.0.0';
 	    var dy = Math.floor(y + Math.max(height - ph, 0) / 2);
 	    var sx = faceIndex % 4 * pw + (pw - sw) / 2;
 	    var sy = Math.floor(faceIndex / 4) * ph + (ph - sh) / 2;
-	    var dw = 100; //your desired portrait width
-		var dh = 100; //your desired portrait heith
+	    var dw = _WIDTH;
+		var dh = _HEIGHT;
 		this.contents.blt(bitmap, sx, sy, sw, sh, dx, dy, dw, dh); //notice two more params
 	};
 })();
