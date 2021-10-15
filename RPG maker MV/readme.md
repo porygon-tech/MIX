@@ -1,4 +1,4 @@
-Note: MapGen was coded it in 2018, and I honestly have no idea about how it works, it just works. 
+Note: MapGen was coded it in 2018, and I honestly have no idea about how it works, it just works. It's not a plugin, so run it separately from the command line.
 
 # Plugins
 ## miki_scaleFace
