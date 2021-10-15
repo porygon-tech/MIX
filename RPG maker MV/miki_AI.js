@@ -38,11 +38,13 @@ Imported.miki_AI = '1.0.0';
   Game_Event.prototype.validAI = function() {
     // if added new AI types, expand here with its name so the
     // updateAI will run
-    return this._aiType === "simple", "coward";
+    return this._aiType === "simple", "coward", "predator";
   };
 
   Game_Event.prototype.updateAI = function(type) {
-    if (type === 'coward') {
+    if (type === 'simple') {
+      return this.updateAISimple();
+    } else if (type === 'coward') {
       return this.updateAICoward();
     }
     // to add more AI types, alias this function
