@@ -3,7 +3,7 @@ alias aliaseditor='nano ~/.bash_aliases && source ~/.bash_aliases'
 alias histg='history | grep'
 alias home='cd ~/'
 alias seekbig="find ./* -size +100M -printf '%f\n'"
-alias gottago='sudo ddcutil setvcp d6 04 && xdg-screensaver lock'
+alias gottago='xdg-screensaver lock && sudo ddcutil setvcp d6 04'
 alias bigfiledetect='find ./* -size +100M'
 
 
