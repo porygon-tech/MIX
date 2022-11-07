@@ -1,11 +1,11 @@
 [Desktop Entry]
 Type=Application
 Version=1.0
-Name=miki_rest
+Name=Rest
 GenericName=miki_rest
 Comment=Miki developed this
 Icon=tweaks-app
-TryExec=~/.local/share/applications/miki_bash/miki_rest.sh
-Exec=~/.local/share/applications/miki_bash/miki_rest.sh %F
+TryExec=/home/roman/.local/share/applications/miki_bash/miki_rest.sh
+Exec=/home/roman/.local/share/applications/miki_bash/miki_rest.sh %F
 Terminal=false
 StartupNotify=true
