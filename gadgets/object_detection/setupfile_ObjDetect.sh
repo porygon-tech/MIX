@@ -23,3 +23,4 @@ unzip coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip -d coco_ssd_mobilenet_v1
 
 wget https://raw.githubusercontent.com/porygon-tech/MIX/master/gadgets/object_detection/TFLite_detection_webcam.py
 python3 TFLite_detection_webcam.py --modeldir=coco_ssd_mobilenet_v1
+deactivate
