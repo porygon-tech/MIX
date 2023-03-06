@@ -13,11 +13,12 @@
 #
 # I added my own method of drawing boxes and labels using OpenCV.
 # 
-# Modified by: Shawn Hymel
-# Date: 09/22/20
+# Modified by: Shawn Hymel, Miguel Roman
+# Date: 09/22/20, 03/06/23
 # Description:
 # Added ability to resize cv2 window and added center dot coordinates of each detected object.
 # Objects and center coordinates are printed to console.
+# Added ability to get video from stream
 
 # Import packages
 import os
@@ -33,9 +34,9 @@ import importlib.util
 # Source - Adrian Rosebrock, PyImageSearch: https://www.pyimagesearch.com/2015/12/28/increasing-raspberry-pi-fps-with-python-and-opencv/
 class VideoStream:
     """Camera object that controls video streaming from the Picamera"""
-    def __init__(self,resolution=(640,480),framerate=30):
+    def __init__(self,resolution=(640,480),framerate=30,src=0):
         # Initialize the PiCamera and the camera image stream
-        self.stream = cv2.VideoCapture(0)
+        self.stream = cv2.VideoCapture(src)
         ret = self.stream.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG'))
         ret = self.stream.set(3,resolution[0])
         ret = self.stream.set(4,resolution[1])
@@ -85,6 +86,8 @@ parser.add_argument('--resolution', help='Desired webcam resolution in WxH. If t
                     default='1280x720')
 parser.add_argument('--edgetpu', help='Use Coral Edge TPU Accelerator to speed up detection',
                     action='store_true')
+parser.add_argument('--srcurl', help='url source from ip camera, e.g. http://10.42.0.196:8081/',
+                    default=None)
 
 args = parser.parse_args()
 
@@ -95,6 +98,8 @@ min_conf_threshold = float(args.threshold)
 resW, resH = args.resolution.split('x')
 imW, imH = int(resW), int(resH)
 use_TPU = args.edgetpu
+
+SOURCE_URL = args.srcurl
 
 # Import TensorFlow libraries
 # If tflite_runtime is installed, import interpreter from tflite_runtime, else import from regular tensorflow
@@ -161,7 +166,7 @@ frame_rate_calc = 1
 freq = cv2.getTickFrequency()
 
 # Initialize video stream
-videostream = VideoStream(resolution=(imW,imH),framerate=30).start()
+videostream = VideoStream(resolution=(imW,imH),framerate=30,src=SOURCE_URL).start()
 time.sleep(1)
 
 # Create window
