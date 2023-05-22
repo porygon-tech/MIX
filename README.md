@@ -27,6 +27,10 @@ keyLgLite is a super lightweight keylogger made using pynput.
 
 ------------
 
+### gadgets/readeer
+readeer extracts keywords from selected text and can summarize it using GPT-3.5 (API key required in a text file in the same directory). Currently only tested in linux.
+
+------------
 
 ### image/borderDetector
 Homemade silly old algorithm to detect image borders based on color 3D euclidean distance (now i think it\'s the same as convolution?¿¿?)
