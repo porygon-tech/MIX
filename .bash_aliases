@@ -38,6 +38,7 @@ alias gotomiRNetworks='cd ~/miRNetworks/mroman'
 function mmiRNet() { mv $1 ~/miRNetworks/mroman && cd ~/miRNetworks/mroman; }
 
 function gupload() {
+        find ./* -size +50M -printf '%f\n' | grep -vxFf .gitignore >> .gitignore
         git add .
         git commit -m "AUTO $(date)"
         git push
