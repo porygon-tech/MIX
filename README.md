@@ -1,6 +1,6 @@
 # MIX
 A mix of miscellaneous tiny scripts.
-
+![rotom](https://play.pokemonshowdown.com/sprites/xyani/porygon.gif)
 ------------
 
 
