@@ -22,6 +22,11 @@ Watchdog is a scrappy surveillance webcam software created using python and Open
 ------------
 
 
+### gadgets/[super_key_disable](https://github.com/porygon-tech/MIX/tree/master/gadgets/super_key_disable "super_key_disable")r
+super_key_disable disables the super key in windows. It was too annoying accidentally pressing it while playing Fortnite ^w^
+
+------------
+
 ### gadgets/keyLgLite
 keyLgLite is a super lightweight keylogger made using pynput.
 
